@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // let data = [12,40,50,70,3];
+        // let position = 2;
+        // let newEle =333;
+        // for(let i = data.length-1; i>=0; i--)
+        // {
+            
+        //     if(i>=position){
+        //         data[i+1] = data[i];
+        //         if(i==position){
+        //             data[i] = newEle;
+        //         }
+        //     }
+        //     console.log(data);
+        // }
+        // data.splice(2,0,333);
+        // console.log(data);
+       function  setValue(){
+        let data = [12,40,50,70,3];
+        let position = document.getElementById("position").value;
+        let newEle = document.getElementById("newElement").value;
+        newEle = parseInt(newEle);
+        for(i = data.length - 1; i >= 0; i--){
+
+            if(i >= position){
+                data[i+1] = data[i];
+                if(i==position){
+                    data[i]= newEle
+                }
+            }
+         
+
+        }
+        console.log(data);
+       }
+</script>
+</head>
+<body>
+<input type="text" placeholder="Position" id="position"/><br><br>
+<input type="text" placeholder="New Element" id ="newElement"><br><br>
+<button onclick="setValue()">Insert Array Element</button>    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cars = ["toyota","honda", "maruti","suzuki","Mahendra", "tata"];
+        let arr = [10,20,30,40,50];
+
+        arr.splice(1,2);
+        console.log(arr);
+
+        arr.splice(2,0,20,30);
+
+        console.log(arr)
+
+        console.log("what is cars value"  + cars.length)
+        delete cars[2]
+        console.log("what is cars value"  + cars.length)  
+        console.log(cars[2])    
+        for(let i = 0; i < cars.length; i++){
+             console.log(cars[i]);
+        }
+
+        for(index in cars){
+            console.log(index);
+        }
+
+        for(car of cars){
+            console.log(car)
+        }
+
+        cars.forEach(function(value,ind,arr,dd){
+            console.log(value,ind,arr,dd)
+        })
+        
+    </script>
+</body>
+</html>
